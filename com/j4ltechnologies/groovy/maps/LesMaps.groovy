@@ -1,7 +1,7 @@
 package com.j4ltechnologies.groovy.maps
 
-// Groovy étend l'API Map en Java pour fournir des méthodes pour des opérations telles que le filtrage,
-// la recherche et le tri. Il fournit également une variété de raccourcis pour créer et manipuler des Map.
+// Groovy Ã©tend l'API Map en Java pour fournir des mÃ©thodes pour des opÃ©rations telles que le filtrage,
+// la recherche et le tri. Il fournit Ã©galement une variÃ©tÃ© de raccourcis pour crÃ©er et manipuler des Map.
 
 // Creation des Maps
 
@@ -19,15 +19,15 @@ println "personne = $personne"
 def autrePersonne = personne.clone()
 assert autrePersonne == personne
 
-// Ajout d'éléments
+// Ajout d'Ã©lÃ©ments
 def employe = [prenom: 'Archange']
 employe["age"] = 18
 employe.ville = 'Paris'
 employe.put('conjoint', 'Marie')
 assert employe == [prenom: 'Archange', age: 18, ville: 'Paris', conjoint: 'Marie']
 
-// En d'autres termes, Groovy prend en charge l'accès aux paires clé-valeur à la manière d'un bean.
-// Nous pouvons également utiliser des variables au lieu de littéraux comme clés lors de l'ajout de nouveaux éléments à la Map
+// En d'autres termes, Groovy prend en charge l'accÃ©s aux paires clÃ©-valeur Ã© la maniÃ©re d'un bean.
+// Nous pouvons Ã©galement utiliser des variables au lieu de littÃ©raux comme clÃ©s lors de l'ajout de nouveaux Ã©lÃ©ments Ã© la Map
 
 def loisir = "loisir"
 def loisirMap = [(loisir): "Lecture"]
@@ -35,25 +35,25 @@ employe.putAll(loisirMap);
 assert employe == [prenom: 'Archange', age: 18, ville: 'Paris', conjoint: 'Marie', loisir: 'Lecture']
 println "employe = $employe"
 
-//Récupération d'éléments
+//RÃ©cupÃ©ration d'Ã©lÃ©ments
 assert employe['prenom'] == 'Archange'
 assert employe.prenom == 'Archange'
 assert employe.get("prenom") == 'Archange'
 assert employe.getAt("prenom") == 'Archange'
 assert mapVide.cle == null
 
-// Suppression d'éléments
+// Suppression d'Ã©lÃ©ments
 def map = [1: 20, a: 30, 2: 42, 4: 34, ba: 67, 6: 39, 7: 49]
 def minusMap = map.minus([2: 42, 4: 34])
 assert minusMap == [1: 20, a: 30, ba: 67, 6: 39, 7: 49]
 
-// Ensuite, nous pouvons également supprimer des entrées en fonction d'une condition.
-// Nous pouvons y parvenir en utilisant la méthode removeAll() :
+// Ensuite, nous pouvons Ã©galement supprimer des entrÃ©es en fonction d'une condition.
+// Nous pouvons y parvenir en utilisant la mÃ©thode removeAll() :
 minusMap.removeAll { it -> it.key instanceof String }
 assert minusMap == [1: 20, 6: 39, 7: 49]
 
-// Inversement, pour conserver toutes les entrées qui satisfont une condition,
-// on peut utiliser la méthode retentionAll() :
+// Inversement, pour conserver toutes les entrÃ©es qui satisfont une condition,
+// on peut utiliser la mÃ©thode retentionAll() :
 minusMap.retainAll { item -> item.value % 2 == 0 }
 assert minusMap == [1: 20]
 
@@ -61,5 +61,5 @@ assert minusMap == [1: 20]
 map.each { el -> println "$el.key : $el.value" }
 map.eachWithIndex { el, i -> println "($i) $el.key: $el.value" }
 
-//Il est également possible de demander que la clé, la valeur et l'index soient fournis séparément :
+//Il est Ã©galement possible de demander que la clÃ©, la valeur et l'index soient fournis sÃ©parÃ©ment :
 map.eachWithIndex { cle, valeur, i -> println "$i $cle: $valeur" }

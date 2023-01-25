@@ -1,14 +1,14 @@
 package com.j4ltechnologies.groovy.io
 
 // Entree Sortie
-print 'Saisir votre prenom : '
+print 'Saisir votre prÃ©nom : '
 def prenom = System.console().readLine()
 println "Votre prenom est $prenom"
 
-print 'Saisir votre âge : '
+print 'Saisir votre $Ã¢ge : '
 def age = System.console().readLine().toInteger()
 println "Votre age est $age ans"
 
-print 'Saisir votre année de naissance : '
+print 'Saisir votre annÃ©e de naissance : '
 def annee = System.console().readLine() as Integer
-println "Vous êtes née en $annee"
+println "Vous ï¿½tes nï¿½e en $annee"

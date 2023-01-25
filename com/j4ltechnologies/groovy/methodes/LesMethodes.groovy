@@ -15,7 +15,7 @@ def somme(int a = 10, int b) {
 somme(3, 6)
 somme(3)
 
-String soustraction(int a = 0, int b = 0) {
+static String soustraction(int a = 0, int b = 0) {
     return "$a - $b = " + (a - b)
 }
 

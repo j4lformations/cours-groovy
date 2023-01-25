@@ -2,7 +2,7 @@ package com.j4ltechnologies.groovy.iterations
 
 // BOUCLE WHILE
 
-//Groovy prend en charge les boucles while {…} habituelles comme Java :
+//Groovy prend en charge les boucles while(cond) {...} habituelles comme Java :
 int i = 1;
 while (i <= 5) {
     print "$i ";
@@ -21,7 +21,7 @@ printf "x = %s\n", x
 
 
 println "\n==========================";
-//La boucle do/while de la classe Java est désormais prise en charge. Exemple:
+//La boucle do/while de la classe Java est dÃ©sormais prise en charge. Exemple:
 def compteur = 5
 def factoriel = 1
 

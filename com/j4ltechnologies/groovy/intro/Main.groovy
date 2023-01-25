@@ -1,7 +1,9 @@
 package com.j4ltechnologies.groovy.intro
 
+import java.time.LocalDate
+
 /**
- * Classe Main, créée le 19/10/2022 à 09:51
+ * Classe Main, crÃ©Ã©e le 19/10/2022 Ã  09:51
  *
  * @author Joachim Zadi
  * @version 1.0 du 19/10/2022
@@ -19,5 +21,6 @@ class Main {
          */
         // Commentaire de ligne
         println 'Bonjour groovy...!'
+        println LocalDate.of(1969,03,20).toString()
     }
 }

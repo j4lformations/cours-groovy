@@ -1,12 +1,12 @@
 package com.j4ltechnologies.groovy.lists
 
-// Groovy utilise une liste de valeurs séparées par des virgules,
-// entourées de crochets, pour désigner les listes.
+// Groovy utilise une liste de valeurs sÃ©parÃ©es par des virgules,
+// entourÃ©es de crochets, pour dÃ©signer les listes.
 // Les listes Groovy sont de simples JDK java.util.List,
-// car Groovy ne définit pas ses propres classes de collection.
-// L'implémentation de liste concrète utilisée lors de la définition
-// des littéraux de liste est java.util.ArrayList par défaut,
-// sauf si vous décidez de spécifier le contraire, comme nous le verrons plus tard.
+// car Groovy ne dÃ©finit pas ses propres classes de collection.
+// L'implÃ©mentation de liste concrÃ©te utilisÃ©e lors de la dÃ©finition
+// des littÃ©raux de liste est java.util.ArrayList par dÃ©faut,
+// sauf si vous dÃ©cidez de spÃ©cifier le contraire, comme nous le verrons plus tard.
 
 def nombres = [1, 2, 3]
 assert nombres instanceof List
@@ -23,7 +23,7 @@ assert nombres instanceof LinkedList
 LinkedList autreNombres = [4, 5, 6]
 assert autreNombres instanceof LinkedList
 
-// Acess aux elements
+// Acess aux Ã©lÃ©ments
 def lettres = ['a', 'b', 'c', 'd']
 
 assert lettres[0] == 'a'

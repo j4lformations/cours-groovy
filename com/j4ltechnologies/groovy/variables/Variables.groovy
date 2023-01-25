@@ -17,14 +17,14 @@ printf "Je m'appelle %s %s\n", prenom, nom;
 println 'Mon prenom est ${prenom}'; // Pas d'interpretation de la variable prenom
 println "Mon prenom est ${prenom}"; // Pas d'interpretation de la variable
 
-//Les variables d'un script ne nécessitent pas de définition de type:
+//Les variables d'un script ne nÃ©cessitent pas de dÃ©finition de type:
 def x = 12
 y = -10.2
 println x;
 println y;
 assert x + y == 1.8
 
-// Groovy est un langage dynamiquement typé
+// Groovy est un langage dynamiquement typÃ©
 y = 'Ange';
 println y;
 

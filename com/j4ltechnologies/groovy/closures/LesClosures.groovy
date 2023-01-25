@@ -1,8 +1,8 @@
 package com.j4ltechnologies.groovy.closures
 
-//Une définition d'une closure suit cette syntaxe
+//Une dÃ©finition d'une closure suit cette syntaxe
 
-// { [parametres de la closure -> ] déclarations }
+// { [parametres de la closure -> ] dÃ©clarations }
 
 // Deffinition de la closure
 def closureUn = { println 'Bonjour ma closure une' }
@@ -12,7 +12,7 @@ closureUn.call();
 def closureDeux = { prenom -> println "Bonjour $prenom depuis la closure deux" }
 closureDeux.call('Joachim')
 
-//Quelques exemples de définitions de closures valides:
+//Quelques exemples de dÃ©finitions de closures valides:
 def closureTrois = { ++item };
 println closureTrois.call(item = 0)
 
@@ -30,14 +30,14 @@ println closureCinq.call(8)
 
 //Les closures comme objets
 
-//Vous pouvez assigner une fermeture à une variable, c'est une instance de groovy.lang.Closure
+//Vous pouvez assigner une fermeture Ã© une variable, c'est une instance de groovy.lang.Closure
 def listener = { e -> println "Vous avez cliquez sur $e.source" }
 assert listener instanceof Closure
 
 //Si vous n'utilisez pas def ou var, vous pouvez utiliser la Closure comme type
 Closure callback = { println "OK...!" }
 
-//Optionnellement, vous pouvez spécifier le type de retour de la closure en utilisant un type générique de Closure
+//Optionnellement, vous pouvez spÃ©cifier le type de retour de la closure en utilisant un type gÃ©nÃ©rique de Closure
 Closure<Boolean> isFichier = { File it -> it.name.endsWith('.txt') }
 
 def concat1 = { String... args -> args.join('') }
